@@ -1,6 +1,5 @@
 import React from 'react';
 import {connect} from 'react-redux'
-import {push} from 'react-router-redux'
 import Hello from './Hello'
 import {onLoad} from '../modules/home'
 
@@ -23,9 +22,10 @@ export class Home extends React.Component {
 }
 
 Home.propTypes = {
-  hasPermission: React.PropTypes.bool.isRequired,
+  hasPermission: React.PropTypes.bool,
   isLoading: React.PropTypes.bool,
   title: React.PropTypes.string,
+  onLoad: React.PropTypes.func
 }
 
 const propsMapper = (state) => {
