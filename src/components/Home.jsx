@@ -3,6 +3,7 @@ import {connect} from 'react-redux'
 import {push} from 'react-router-redux'
 import Hello from './Hello'
 import {onLoad} from '../modules/home'
+import CampaignList from './CampaignList'
 
 /**
  * dump component
@@ -17,6 +18,7 @@ export class Home extends React.Component {
     return (
       <div>
         <Hello hasPermission={this.props.hasPermission}/>
+        <CampaignList />
       </div>
     );
   }
