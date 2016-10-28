@@ -32,9 +32,11 @@ export function getFundraising() {
 export function getFundraisingAsync() {
 
   return new Promise((resolve, reject) => {
-    // TODO: calls constracts func().then((result) => resolve(result))
-    setTimeout(() => {
-      resolve(mockData);
-    }, 100);
+    // TODO: calls constracts then callback response => resolve(response)
+    let error; // undefined
+    if (error) {
+      reject(error);
+    }
+    resolve(mockData);
   });
 }
